@@ -7,24 +7,27 @@
     color: black;
 } 
 
-html, body {
+/* html, body {
     margin: 0 0;
     width: 100%;
     height: 100%;
-}
+} */
 
 *,
 *:after,
 *:before {
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    /* border: 0 0 0 0; */
     box-sizing: border-box;
 }
 
 .container {
     position: relative;
-    display: flex; 
-    
+    display: flex;
+        
+    align-items: center;
     height: 44px;
-    /* flex: 1 1 auto; */
     background-color: #000000;
 }
 
@@ -47,6 +50,7 @@ html, body {
 .lolk {
     position: relative;
     display: flex;
+    
     align-items: center;
     
     padding: 0 5px;
@@ -64,6 +68,7 @@ html, body {
 .upper-right {
     position: relative;
     display: flex;
+    flex-direction: row;
     align-items: center;
     /* justify-content: space-between; */
     /* max-width: 1920px; */
@@ -88,55 +93,60 @@ html, body {
 
 .nav_logo {
     position: relative;
-    display: flex;
-    flex-direction: row;
-    
-    /* width: 1920px; */
+    display: block;
     height: 80px;
-    /* left: 0px;
-    top: 44px; */
     background-color: black;
 }
 
-.nav_logo div {
-    margin: 100px 100px;
-    padding: 10px 10px;
+
+
+.main-logo {
+    display: flex;
+    flex-direction: row;
+    margin: 0 45px;
+    padding: 0 20px;
+    justify-content: space-evenly;
+    align-items:center;
+    /* margin: 0 45px;
+    padding: 0 20px; */
+    
 }
 
-.trashbag_search {
+
+/* .main-logo div {
+    margin: 0 auto;
+    padding: 0 10px;
+} */
+
+
+
+.logo-logo {
+    padding: 0 10px 0 10px;
+}
+
+.logo {
     position: relative;
     display: flex;
-    align-items: center;
-    flex-direction: row;
-       
+    text-decoration: none;
+    color: white;
+
+    font-family: Post No Bills Jaffna;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 54px;
 }
 
-.trashbag {
-    
-    display: flex;
-    margin: 0 5px;
-
-    
-}
-
-.search {
-    
-    display: flex;
-    margin: 0 5px;
-    
-
-}
+/* .nav_logo div {
+    margin: 100px 100px;
+    padding: 10px 10px;
+} */
 
 
 .nav_nav {
 position: relative;
 display: flex;
-/* width: 478px; */
-height: 80px;
-left: 920px;
-top: auto;
-z-index: 1000;
-
+align-items: center;
 
 font-family: PT Sans;
 font-style: normal;
@@ -151,106 +161,122 @@ text-transform: uppercase;
 .nav_link {
     position: relative;
     display: flex;
+    margin: 0 20px;
     color: rgb(255, 255, 255);
     text-decoration: none;
-    border: 31px dashed #000000;
-    margin: auto;
+    /* border: 31px dashed #000000; */
+    /* margin: auto; */
 }
+
+
 
 /* .nav_link::after {
-    margin: 0 10px 0 10px;
-}
+    margin: 0 20px 0 0;
+} */
 
-.nav_link:last-child::after {
+/* .nav_link:last-child::after {
     content: "";
 } */
 
+.nav_link:last-child {
+    margin: 0 0 0 20px;
+}
+
 .nav_link:first-child {
-    border: 31px dashed #1f1f1f;
+    margin: 0 0 0 0;
+    /* border: 31px dashed #1f1f1f; */
+    border-top: 31px dashed #1f1f1f;
+    border-bottom: 31px dashed #1f1f1f;
+    border-left: 20px dashed #1f1f1f;
+    border-right: 20px dashed #1f1f1f;
     background-color: #1f1f1f;
-    border-radius: 3px; 
-    z-index: 1000;
+    border-radius: 3px;
 }
-
-
-
-.logo {
-    position: relative;
-    display: flex;
-    align-items: center;
-    /* width: 104px;
-    height: 49px; */
-    
-    /* left: 400px; */
-    /* display: flex; top 14px */
-    top: auto;
-    text-decoration: none;
-    color: white;
-
-    font-family: Post No Bills Jaffna;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 36px;
-    line-height: 54px;
-}
-
-/* .main {
-width: 100%;
-height: 100vh;
-display: flex;
-background: url("/assets/image/main.jpg") center no-repeat;
--webkit-background-size: cover;
-background-size: cover;
-} */
 
 .main {
-    /* position: absolute; */
-flex: 1 1 auto;
-width: 1920px;
-height: 810px;
-left: 0px;
-top: 124px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center;
+    justify-content: center; */
+
+    width: 100%;
+    height: 90vh;
+    /* background: linear-gradient(0deg, rgba(15, 15, 15, 0.5), rgba(15, 15, 15, 0.5)), url(/assets/image/main.jpg),no-repeat #000000; */
+    background-image: url(/assets/image/main.jpg);
+    /* background-size: 1920px 1080px;
+    background-repeat: no-repeat no-repeat; */
+    background-size: cover;
+    background-position:center;
+    overflow: hidden;
+
+    /* width: 1920px;
+    height: 810px; */
 }
 
+.main-fon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-porten {
+    position: relative;
+    /* display: block; */
+    /* margin: 0 0 80px 0; */
+    border: 3px solid white;
+    padding: 70px;
+}
+
+.content-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .content {
-position: absolute;
+position: relative;
+display: inline-flex;
+text-align: justify;
 width: 730px;
-height: 96px;
-left: 595px;
-top: 684px;
-display: flex;
+padding: 10px 20px;
+margin-bottom: 154px;
+/* width: 90%;
+margin: 80px 0 154px 0; */
 
 font-family: PT Sans;
+
 font-style: normal;
 font-weight: normal;
 font-size: 16px;
 line-height: 150%;
 
-text-align: center;
 text-transform: uppercase;
 
-color: #FFFFFF;
+color: #ffffff;
 }
+
 
 .prod {
-    position: relative;
-    display: flex;
-    flex-direction: row;  
-    margin: 0 0;
-    padding: 0 0;
+    display: block;
 }
 
 
+.prodd {
+    display: flex;
+    flex-direction: row;
+}
+
 .product {
-    /* min-height: 100%; */
-    flex-direction: column;
+    position: relative;
     display: block;
+    /* flex-direction: column;
+    align-items: center;
+    justify-content: center; */
     /* background-color: #000000; */
-    width: 1040px;
+    /* width: 1040px; */
+    width: 54%;
     height: 730px;
-    left: 0px;
-    top: 934px;
     /* float: right; */
     background: #000000;
 }
@@ -261,79 +287,91 @@ color: #FFFFFF;
 .name_product {
     display: flex;
     justify-content: center;
-    margin: 20px 0 20px 0;
-    
+    margin-top: 93px;
     color:#FFFFFF;
-    
+    /* width: 376px; */
+    height: 39px;
+
     font-family: 'PT sans';
     font-style: normal;
     font-size: 36px;
     line-height: 48px;
 }
 
+.prod-line {
+    border-top: 1px solid #FFFFFF;
+    width: 120px;
+    margin: 50px auto;
+}
+
 
 .product_product {
-    position: relative;
     display: flex;
-    align-items: center;
-    justify-content:space-around;
-    margin-top: 200px;
-    padding: 0 0;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.product-item {
+    display: block;
+}
+
+.product-link {
+    display: block;
+    text-decoration: none;
+    color: #ffffff;
 }
 
 .clock_main {
-    display: flex;
-    
     border-radius: 2%;
-    border: auto dashed #f3f3f3;
+    
+    border-top: 55px dashed #191B1C;
+    border-bottom: 56px dashed #191B1C;
+    border-right: 22px dashed #191B1C;
+    border-left: 23px dashed #191B1C;
     background-color: #191B1C;
-    margin: 0px 20px;
-    
-    
-    /* justify-content: space-between; */
-
+    /* margin: 0px 20px; */
 }
 
-.clock_name {
-    position: relative;
-    display: flex;
-  
-    
-
+.dsa {
+    margin-top: 10px;
 }
-
 
 
 .product_collection {
-    width: 880px;
-    height: 730px;
     position: relative;
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 46%;
+    /* width: 880px; */
+    /* height: 730px; */
+    
     /* flex: 1 1 auto; */
     /* max-width: 100%; */
     /* min-width: 880px; */
     background: linear-gradient(0deg, rgba(15, 15, 15, 0.5), rgba(15, 15, 15, 0.5)), url(/assets/image/new-collection.jpg),no-repeat #000000;
-   
+    background-size: 100%, 100%;
+    background-repeat: no-repeat no-repeat;
     
 }
 
 .new_collection {
-    position: relative;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    margin-bottom: 100px;
+    /* align-items: center; */
+    /* justify-content: center; */
     
 }
 
 .line {
-    position: relative;
-    display: flex;
-    height: 10px;
+    margin: 30px auto;
+    /* height: 10px; */
     width:  125px;
     border-top: 1px solid #ffffff;
     /* border-bottom: dotted 1px #9EC1D4; */
-    padding-left: 10px;
+    /* padding-left: 10px; */
     
 }
 
@@ -348,8 +386,7 @@ color: #FFFFFF;
 }
 
 .asd {
-    
-    margin: 20px 20px;
+    margin: 0 auto;
     color: #FFFFFF;
     padding: 20px 25px;
     text-decoration: none;
@@ -358,17 +395,92 @@ color: #FFFFFF;
 }
 
 
+.info {
+    display: block;
+    width: auto;
+}
+
+.info-collection {
+    display: flex;
+    flex-direction: row;
+}
+
+.info-background {
+    background: linear-gradient(0deg, rgba(15, 15, 15, 0.5), rgba(15, 15, 15, 0.5)), url(/assets/image/Rectangle\ 9.jpg),no-repeat #000000;
+    background-size: 100%, 100%;
+    min-height: 600px;
+    width: 46%;
+}
+
+.info-info {
+    background-color: #000000;
+    height: 600px;
+    width: 54%;
+
+}
+
+
+.text2018 {
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 100px;
+
+    font-family: Playfair Display;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 48px;
+    color: #ffffff;
+}
 
 
 
+.line2 {
+    border-top: 1px solid #ffffff;
+    width: 120px;
+    margin: 40px auto;
+}
+
+.info-text {
+    
+    margin: 0 auto;
+    width: 45.3%;
+    text-align: center;
+    font-family: PT Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 150%;
+    color: #ffffff;
+}
 
 
-
-
-
-
-
-
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    /* width: 20vh;
+    height: 8vh; */
+    width: 30%;
+    height: 8%;
+    /* border-width: 30%; */
+    font-family: PT Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+     
+    color: #ffffff;
+    padding: 12px 28px;
+    background:transparent;
+    border: 1px solid #ffffff;
+    outline: none;
+    cursor: pointer;
+}
 
 
 
